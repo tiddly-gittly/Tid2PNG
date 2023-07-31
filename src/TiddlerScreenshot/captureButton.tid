@@ -1,0 +1,17 @@
+caption: {{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-line}} "Export as image"
+description: Export the current Tiddler as a PNG image
+tags: $:/tags/ViewToolbar
+title: $:/plugins/FSpark/TiddlerScreenshot/captureButton
+
+\whitespace trim
+<$button tooltip="Export as image" aria-label="Screenshot" class=<<tv-config-toolbar-class>>>
+<$tiddlerscreenshot/>
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+{{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-line}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text">
+<$text text="Screenshot"/>
+</span>
+</$list>
+</$button>

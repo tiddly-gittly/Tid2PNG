@@ -1,0 +1,5 @@
+created: 20230730145916187
+list: $:/core/ui/Buttons/more-tiddler-actions $:/plugins/kookma/utility/ui/Buttons/DraggableLink $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/plugins/bimlas/locator/viewtemplate/open-in-sidebar $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/fold-bar $:/plugins/mabuqian/gumo-customisation/add-prefix $:/plugins/mabuqian/gumo-customisation/copy-tags-button $:/plugins/mabuqian/gumo-customisation/fours/open $:/plugins/mabuqian/gumo-customisation/fours/recent $:/plugins/mabuqian/gumo-customisation/fours/search $:/plugins/mabuqian/gumo-customisation/fours/thebrain $:/plugins/oeyoews/copy-title/copybutton $:/core/ui/Buttons/close $:/xp/ui/Buttons/aggregation-view $:/xp/ui/Buttons/view-subtiddler
+modified: 20230730145916187
+title: $:/tags/ViewToolbar
+type: text/vnd.tiddlywiki

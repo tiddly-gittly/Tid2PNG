@@ -1,0 +1,9 @@
+{
+  "title": "$:/plugins/FSpark/TiddlerScreenshot",
+  "name": "TiddlerScreenshot",
+  "author": "FSpark",
+  "description": "to export the Tiddler as a PNG image",
+  "plugin-type": "plugin",
+  "version": "0.0.1",
+  "list": "readme"
+}
