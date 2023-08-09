@@ -1,1 +1,32 @@
-"use strict"; var __create = Object.create, __defProp = Object.defineProperty, __getOwnPropDesc = Object.getOwnPropertyDescriptor, __getOwnPropNames = Object.getOwnPropertyNames, __getProtoOf = Object.getPrototypeOf, __hasOwnProp = Object.prototype.hasOwnProperty, __copyProps = (t, r, o, n) => { if (r && "object" == typeof r || "function" == typeof r) for (let e of __getOwnPropNames(r)) __hasOwnProp.call(t, e) || e === o || __defProp(t, e, { get: () => r[e], enumerable: !(n = __getOwnPropDesc(r, e)) || n.enumerable }); return t }, __toESM = (e, t, r) => (r = null != e ? __create(__getProtoOf(e)) : {}, __copyProps(!t && e && e.__esModule ? r : __defProp(r, "default", { value: e, enumerable: !0 }), e)), import_widget = require("$:/core/modules/widgets/widget.js"), import_html2canvas_min = __toESM(require("$:/plugins/FSpark/TiddlerScreenshot/html2canvas.min.js")), TScreenshotWidget = class extends import_widget.widget { refresh(e) { return !1 } render(e, t) { console.log(import_html2canvas_min["default"]), this.parentDomNode = e, this.execute(), this.renderChildren(e, t) } invokeAction(e, t) { var r = e.domNode.closest("[role='article']"); r && (0, import_html2canvas_min["default"])(r).then(e => { e.toBlob(e => { var t = URL.createObjectURL(e), r = document.createElement("a"); r.href = t, r.download = this.getVariable("currentTiddler") + ".png", r.click(), window.URL.revokeObjectURL(t) }) }) } }; exports.tiddlerscreenshot = TScreenshotWidget;
+const Widget = require('$:/core/modules/widgets/widget.js').widget;
+const html2canvas = require('$:/plugins/FSpark/TiddlerScreenshot/html2canvas.min.js');
+
+class TScreenshotWidget extends Widget {
+  refresh(changedTiddlers) {
+    return false;
+  }
+
+  render(parent, _nextSibling) {
+    this.parentDomNode = parent;
+    this.execute();
+    this.renderChildren(parent, _nextSibling);
+  }
+
+  invokeAction(triggeringWidget, event) {
+    let tiddlerFrame = triggeringWidget.domNode.closest("[role='article']");
+    if (tiddlerFrame) {
+      html2canvas(tiddlerFrame).then((canvas) => {
+        canvas.toBlob((blob) => {
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = `${this.getVariable("currentTiddler")}-${new Date().getTime()}.png`;
+          a.click();
+          window.URL.revokeObjectURL(url);
+        });
+      });
+    }
+  }
+}
+
+exports.tiddlerscreenshot = TScreenshotWidget;
