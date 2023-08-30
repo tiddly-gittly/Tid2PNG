@@ -1,0 +1,17 @@
+created: 20230830104608726
+modified: 20230830104621168
+tags: 
+title: 代码存放 1
+type: text/vnd.tiddlywiki
+
+
+```
+if (details) {
+      // 移除其所有的子元素
+      while (details.firstChild) {
+        details.removeChild(details.firstChild);
+      }
+      // 也可以直接清空内容
+      //details.innerHTML = '';
+    };
+```

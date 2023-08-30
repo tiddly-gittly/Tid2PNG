@@ -4,6 +4,6 @@
   "author": "FSpark",
   "description": "to export the Tiddler as a PNG image",
   "plugin-type": "plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "list": "readme"
 }
