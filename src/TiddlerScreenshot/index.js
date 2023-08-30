@@ -19,11 +19,15 @@ class TScreenshotWidget extends Widget {
     let tiddlerDiv = triggeringWidget.domNode.closest("[role='article']");
     const details = tiddlerDiv.querySelector(".kk-utility-details");
 
-    const style = details.getAttribute('style');
+    details.innerHTML = '<br><br><br>' + details.innerHTML;
 
-    details.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + '\n\n' + details.innerHTML;
-
-    details.setAttribute('style', style);
+    const dropDown = tiddlerDiv.querySelector(".tc-popup");
+    if (dropDown) {
+      // 移除其所有的子元素
+      while (dropDown.firstChild) {
+        dropDown.removeChild(dropDown.firstChild);
+      }
+    };
 
     if (tiddlerFrame) {
       html2canvas(tiddlerFrame).then((canvas) => {

@@ -8,3 +8,5 @@ Usage: Click the {{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-l
 !! Credits
 * [[tiddly-gittly/Modern.TiddlyDev|https://github.com/tiddly-gittly/Modern.TiddlyDev]]
 * [[niklasvh/html2canvas|https://github.com/niklasvh/html2canvas]]
+
+导出的图片无法展示notion-pgae插件里的背景图片。原因未知，修复时间未知。
