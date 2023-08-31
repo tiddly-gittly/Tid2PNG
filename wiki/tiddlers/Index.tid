@@ -1,6 +1,6 @@
 created: 20230721145148081
-modified: 20230830121517888
-page-cover: https://pic4.zhimg.com/v2-881f391ae052f85939fcfeb40bc2056c
+modified: 20230831102518508
+page-cover: https://api.yimian.xyz/img?type=wallpaper
 title: Index
 type: text/vnd.tiddlywiki
 
@@ -13,3 +13,5 @@ Usage: Click the {{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-l
 * [[niklasvh/html2canvas|https://github.com/niklasvh/html2canvas]]
 
 导出的图片无法展示notion-pgae插件里的背景图片。原因未知，修复时间未知。
+
+<$tid2png>
