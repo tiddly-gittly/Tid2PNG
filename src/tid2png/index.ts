@@ -39,7 +39,7 @@ class Tid2PngWidget extends Widget {
       useCORS: true, // 使用跨域
       allowTaint: true
     };
-    
+
     let tiddler_frame = triggeringWidget.domNode.closest("[role='article']");
     let details = tiddler_frame.querySelector(".kk-utility-details");
     // html2canvas 无法渲染网络图片 
@@ -83,7 +83,7 @@ class Tid2PngWidget extends Widget {
             var url = URL.createObjectURL(blob);
             var a = document.createElement('a');
             a.href = url;
-            a.download = `${this.getVariable("currentTiddler")}-${new Date().getTime()}.png`;
+            a.download = `${this.makeTitleSafe(this.getVariable("currentTiddler"))}_${new Date().getTime()}.png`;
             a.click();
             window.URL.revokeObjectURL(url);
           });
@@ -92,6 +92,13 @@ class Tid2PngWidget extends Widget {
 
     })
   }
+
+  makeTitleSafe(title) {
+    var illegalFilenameCharacters = /<|>|\:|\"|\/|\\|\||\?|\*|\^|\s/g;
+    var fixedTitle = $tw.utils.transliterate(title).replace(illegalFilenameCharacters, "_");
+    return fixedTitle;
+  }
+
 }
 
 exports['tid2png'] = Tid2PngWidget;
