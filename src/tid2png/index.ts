@@ -14,6 +14,11 @@ class Tid2PngWidget extends Widget {
     this.renderChildren(parentNode, nextSibling);
   }
 
+  /**
+   * getBase64Image
+   * @param src img_url
+   * @returns "data:image/jpeg;base64,/9..." or ''
+   */
   getBase64Image(src) {
     return new Promise(resolve => {
       let xhr = new XMLHttpRequest();
@@ -30,8 +35,13 @@ class Tid2PngWidget extends Widget {
           oFileReader.readAsDataURL(blob);
         }
       }
+      xhr.onerror = (err) => {
+        resolve('');
+        console.log(err);
+      };
+      xhr.ontimeout = (e) => { e };
       xhr.send();
-    })
+    }).catch(err => err);
   }
 
   invokeAction(triggeringWidget, event) {
@@ -64,8 +74,10 @@ class Tid2PngWidget extends Widget {
 
       // result、img_elist有同样的索引。
       for (var idex in result) {
-        img_elist[idex].setAttribute('crossorigin', "anonymous"); // 重点！设置image对象可跨域请求
-        img_elist[idex].setAttribute('src', result[idex]);
+        if (result[idex] !== '') {
+          img_elist[idex].setAttribute('crossorigin', "anonymous"); // 重点！设置image对象可跨域请求
+          img_elist[idex].setAttribute('src', result[idex]);
+        }
       }
 
       console.log(img_elist);

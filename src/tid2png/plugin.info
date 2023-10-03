@@ -4,6 +4,6 @@
   "author": "FSpark",
   "description": "Captures the currentTiddler as a PNG image",
   "plugin-type": "plugin",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "list": "readme"
 }
