@@ -3,7 +3,7 @@ type: text/vnd.tiddlywiki
 
 ! Tid2PNG
 
-条目截图 （Screenshot Tiddler）
+条目截图 （Screenshot Tiddler）: Captures the currentTiddler as a PNG image
 
 !! Read Me
 

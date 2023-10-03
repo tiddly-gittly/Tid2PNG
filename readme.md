@@ -1,3 +1,7 @@
+# Tid2PNG
+
+条目截图 （Screenshot Tiddler）: Captures the currentTiddler as a PNG image
+
 ## Read Me
 
 Usage: Click the icon on the Tiddler toolbar to export the current Tiddler as a PNG image.
