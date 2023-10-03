@@ -1,9 +1,9 @@
-title: $:/plugins/FSpark/TiddlerScreenshot/readme
+title: $:/plugins/FSpark/tid2png/readme
 type: text/vnd.tiddlywiki
 
 !! Read Me
 
-Usage: Click the {{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-line}} icon on the Tiddler toolbar to export the current Tiddler as a PNG image.
+Usage: Click the {{$:/plugins/FSpark/tid2png/remix-icon/screenshot-icon}} icon on the Tiddler toolbar to export the current Tiddler as a PNG image.
 
 !! Credits
 * [[tiddly-gittly/Modern.TiddlyDev|https://github.com/tiddly-gittly/Modern.TiddlyDev]]
