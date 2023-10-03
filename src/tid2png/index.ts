@@ -1,5 +1,7 @@
 import { IChangedTiddlers, IParseTreeNode, IWidgetInitialiseOptions } from 'tiddlywiki';
 import { widget as Widget } from '$:/core/modules/widgets/widget.js';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 const html2canvas = require('$:/plugins/FSpark/tid2png/html2canvas.min.js');
 
 class Tid2PngWidget extends Widget {
@@ -45,6 +47,8 @@ class Tid2PngWidget extends Widget {
   }
 
   invokeAction(triggeringWidget, event) {
+    NProgress.start();
+    
     const setup = {
       useCORS: true, // 使用跨域
       allowTaint: true
@@ -98,6 +102,7 @@ class Tid2PngWidget extends Widget {
             a.download = `${this.makeTitleSafe(this.getVariable("currentTiddler"))}_${new Date().getTime()}.png`;
             a.click();
             window.URL.revokeObjectURL(url);
+            NProgress.done();
           });
         });
       }
