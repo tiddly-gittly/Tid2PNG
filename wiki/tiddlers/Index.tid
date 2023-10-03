@@ -1,14 +1,19 @@
 created: 20230721145148081
-modified: 20231003064913441
+modified: 20231003080937239
 page-cover: https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wHfR?ver=0e99
 title: Index
 type: text/vnd.tiddlywiki
 
-!! Read Me
+! Tid2PNG
+
+条目截图 （Screenshot Tiddler）: Captures the currentTiddler as a PNG image
+
+
+!! 1. Read Me
 
 Usage: Click the {{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-line}} icon on the Tiddler toolbar to export the current Tiddler as a PNG image.
 
-!! Credits
+!! 2. Credits
 * [[tiddly-gittly/Modern.TiddlyDev|https://github.com/tiddly-gittly/Modern.TiddlyDev]]
 * [[niklasvh/html2canvas|https://github.com/niklasvh/html2canvas]]
 
