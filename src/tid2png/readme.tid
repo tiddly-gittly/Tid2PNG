@@ -1,6 +1,10 @@
 title: $:/plugins/FSpark/tid2png/readme
 type: text/vnd.tiddlywiki
 
+! Tid2PNG
+
+条目截图 （Screenshot Tiddler）
+
 !! Read Me
 
 Usage: Click the {{$:/plugins/FSpark/tid2png/remix-icon/screenshot-icon}} icon on the Tiddler toolbar to export the current Tiddler as a PNG image.

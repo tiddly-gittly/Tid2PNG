@@ -1,8 +1,8 @@
 {
   "title": "$:/plugins/FSpark/tid2png",
-  "name": "tid2png",
+  "name": "Tid2PNG",
   "author": "FSpark",
-  "description": "to export the Tiddler as a PNG image",
+  "description": "条目截图 （Screenshot Tiddler）",
   "plugin-type": "plugin",
   "version": "0.0.6",
   "list": "readme"
