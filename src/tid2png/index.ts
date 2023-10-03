@@ -51,6 +51,7 @@ class Tid2PngWidget extends Widget {
     // console.log(imgArray);
     // pamoise 初始化请求图片
 
+    // 思路：获取所有img元素并使用base64替换链接，设置他们的跨域属性。最后使用html2canvas拍照。
     Promise.all(imgArray.map((item, index, arr) => {
       // let img_e = document.querySelector("img");
       // img_e.getAttribute("src");
@@ -59,8 +60,9 @@ class Tid2PngWidget extends Widget {
     })).then(result => {
       // 返回的图片列表，重新渲染到页面上
 
-      console.log(result);
+      // console.log(result);
 
+      // result、img_elist有同样的索引。
       for (var idex in result) {
         img_elist[idex].setAttribute('crossorigin', "anonymous"); // 重点！设置image对象可跨域请求
         img_elist[idex].setAttribute('src', result[idex]);
