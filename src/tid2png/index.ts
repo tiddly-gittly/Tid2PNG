@@ -16,6 +16,11 @@ class Tid2PngWidget extends Widget {
     this.renderChildren(parentNode, nextSibling);
   }
 
+  tm_notify(generalNotification: string, message: string) {
+    $tw.wiki.addTiddler({ title: `$:/state/notification/${generalNotification}`, text: `${generalNotification}: ${message}` });
+    $tw.notifier.display(`$:/state/notification/${generalNotification}`);
+  }
+
   /**
    * getBase64Image
    * @param src img_url
@@ -104,6 +109,10 @@ class Tid2PngWidget extends Widget {
             window.URL.revokeObjectURL(url);
             NProgress.done();
           });
+        }).catch(err => {
+          this.tm_notify("Bomb! html2canvas Error", `\n <font color="#FF0000">${err}</font>`);
+          console.error(err);
+          NProgress.done(true);
         });
       }
 
