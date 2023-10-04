@@ -24,3 +24,5 @@ Usage: Click the icon on the Tiddler toolbar to Captures the currentTiddler as a
 <img width=145 src="https://img.thosefree.com/wp-content/uploads/2020/09/html2canvas-cover.jpg&720x405.jpg">
 
 实现原理：通过捕获当前条目的DOM状态，对它进行“拍照”处理获得图像文件（照片），然后保存下来。
+
+注意：水平分割线height不应小于1px或更高，否则会导致异常（在CanvasRenderingContext2D上执行'drawImage'失败:image参数是一个宽度或高度为0的canvas元素;）。
