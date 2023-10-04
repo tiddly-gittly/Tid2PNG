@@ -52,6 +52,7 @@ class Tid2PngWidget extends Widget {
   }
 
   invokeAction(triggeringWidget, event) {
+    // 思路：获取所有img元素并使用base64替换链接，设置他们的跨域属性。最后使用html2canvas拍照。
     NProgress.start();
 
     const setup = {
@@ -61,16 +62,13 @@ class Tid2PngWidget extends Widget {
 
     let tiddler_frame = triggeringWidget.domNode.closest("[role='article']");
     let details = tiddler_frame.querySelector(".kk-utility-details");
-    // html2canvas 无法渲染网络图片 
 
     // 拿到所有img元素，整理为列表。
     // 将img链接整理为base64图片在放回去。
     let img_elist = tiddler_frame.querySelectorAll("img");
     let imgArray = Array.from(img_elist);
     // console.log(imgArray);
-    // pamoise 初始化请求图片
 
-    // 思路：获取所有img元素并使用base64替换链接，设置他们的跨域属性。最后使用html2canvas拍照。
     Promise.all(imgArray.map((item, index, arr) => {
       // let img_e = document.querySelector("img");
       // img_e.getAttribute("src");
