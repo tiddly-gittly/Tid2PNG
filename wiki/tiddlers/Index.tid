@@ -1,18 +1,23 @@
 created: 20230721145148081
-modified: 20231003112542989
+modified: 20231004085442408
 page-cover: https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wHfR?ver=0e99
 title: Index
 type: text/vnd.tiddlywiki
 
 ! Tid2PNG
 
-条目截图 （Screenshot Tiddler）: Captures the currentTiddler as a PNG image
-
-最佳使用方法是将 截图按钮 放在“查看工具栏”，即默认方式，这样拍照的时候就不会因为“乱动”而照片模糊。（或者实现几种辅助“拍照”工具，比如快捷键、悬浮菜单等等）
+Screenshot Tiddler: Captures the currentTiddler as a PNG image
 
 !! 1. Read Me
 
 Usage: Click the {{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-line}} icon on the Tiddler toolbar to Captures the currentTiddler as a PNG image.
+
+The best practice is to put the screenshot button in the "view toolbar", which is the default way. This prevents the screenshot from getting blurred due to accidental moves when taking the photo. (Or implement several assistive "screenshot" tools, such as keyboard shortcuts, floating menus, etc.)
+
+It is recommended to use [[CPL|https://tw-cpl.netlify.app/]] for installation to get the latest version. Or you can drag [[$:/plugins/FSpark/tid2png]] into your wiki.
+
+* code: https://github.com/tiddly-gittly/Tid2PNG
+* demo: https://tiddly-gittly.github.io/Tid2PNG
 
 !! 2. Credits
 
@@ -21,10 +26,45 @@ Usage: Click the {{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-l
 
 !! 3. Contributors
 
-* dongrentianyu: https://github.com/dongrentianyu
 * whitefall: https://github.com/Zacharia2
 * FSpark: https://github.com/FSpark
+* dongrentianyu: https://github.com/dongrentianyu
 
 [img width=145 [https://img.thosefree.com/wp-content/uploads/2020/09/html2canvas-cover.jpg&720x405.jpg]]
 
-实现原理：通过捕获当前条目的DOM状态，对它进行“拍照”处理获得图像文件（照片），然后保存下来。
+!! 4. Implementation principle: 
+
+Capture the DOM state of the current item, take a "screenshot" of it to get an image file (picture), then save it.
+
+! 条目截图 
+
+可导出当前条目为图片。
+
+
+!! 1. Read Me
+
+用法: 点击条目工具栏里的 {{$:/plugins/FSpark/TiddlerScreenshot/remix-icon/screenshot-2-line}} 图标来导出图片。
+
+最佳使用方法是将 截图按钮 放在“查看工具栏”，即默认方式，这样拍照的时候就不会因为“乱动”而照片模糊。（或者实现几种辅助“拍照”工具，比如快捷键、悬浮菜单等等）
+
+推荐使用[[CPL|https://tw-cpl.netlify.app/]]安装以获取最新版本。或者你可以把[[$:/plugins/FSpark/tid2png]]拖到你的wiki里。
+
+* code: https://github.com/tiddly-gittly/Tid2PNG
+* demo: https://tiddly-gittly.github.io/Tid2PNG
+
+!! 2. 使用框架
+
+* [[tiddly-gittly/Modern.TiddlyDev|https://github.com/tiddly-gittly/Modern.TiddlyDev]]
+* [[niklasvh/html2canvas|https://github.com/niklasvh/html2canvas]]
+
+!! 3. 贡献者
+
+* whitefall: https://github.com/Zacharia2
+* FSpark: https://github.com/FSpark
+* dongrentianyu: https://github.com/dongrentianyu
+
+[img width=145 [https://img.thosefree.com/wp-content/uploads/2020/09/html2canvas-cover.jpg&720x405.jpg]]
+
+!! 4. 实现原理
+
+通过捕获当前条目的DOM状态，对它进行“拍照”处理获得图像文件（照片），然后保存下来。
