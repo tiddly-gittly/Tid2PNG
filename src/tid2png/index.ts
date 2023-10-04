@@ -48,7 +48,7 @@ class Tid2PngWidget extends Widget {
 
   invokeAction(triggeringWidget, event) {
     NProgress.start();
-    
+
     const setup = {
       useCORS: true, // 使用跨域
       allowTaint: true
